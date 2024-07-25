@@ -1,0 +1,144 @@
+/* Base styles (for larger screens) */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #282c34;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-family: 'Merriweather', serif;
+}
+
+header nav {
+    margin-top: 10px;
+}
+
+img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+}
+
+.intro img {
+    width: 100%;
+    height: auto;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+section img {
+    width: 100%;
+    height: auto;
+}
+
+section h2 {
+    border-bottom: 2px solid #282c34;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    font-family: 'Lora', serif;
+}
+
+footer {
+    background-color: #282c34;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+p {
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: #0066cc;
+}
+
+a:hover {
+    color: #5e98d3;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+
+    /* Styles for tablets */
+    header {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header nav a {
+        font-size: 1rem;
+    }
+
+    main {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Styles for mobile phones */
+    header {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    header nav a {
+        font-size: 0.9rem;
+        margin: 0 10px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    section {
+        margin-bottom: 15px;
+    }
+
+    footer {
+        padding: 8px;
+    }
+}
