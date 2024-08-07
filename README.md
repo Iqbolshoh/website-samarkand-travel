@@ -1,7 +1,7 @@
 ## Samarkand Travel Guide
 Explore Samarkand with our comprehensive guide detailing its rich history, iconic landmarks, and vibrant museums. Discover ancient architecture, cultural attractions, and local tours to fully experience the beauty of this historic city.
 
-![Samarkand Travel Guide Banner](img/banner.png)
+![Samarkand Travel Guide Banner](images/banner.png)
 
 ### HTML
 
