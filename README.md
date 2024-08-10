@@ -25,7 +25,6 @@ The Samarkand Travel Guide provides tourists and history enthusiasts with detail
 - **Rich Content**: Includes detailed information on Samarkand's history, landmarks, museums, and tours.
 - **Visual Appeal**: Uses high-quality images to showcase the beauty of Samarkand.
 - **User-Friendly Navigation**: Easy-to-use navigation links that allow users to quickly access different sections of the guide.
-- 
 ### Desktop View
 
 ![Desktop View](./images/desktop.png)
