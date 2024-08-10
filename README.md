@@ -3,6 +3,14 @@ Explore Samarkand with our comprehensive guide detailing its rich history, iconi
 
 ![Samarkand Travel Guide Banner](images/banner.png)
 
+- **Desktop View:**
+  
+  ![Desktop View](images/calculator-screenshot.png)
+
+- **Mobile View:**
+
+  ![Mobile View](images/mobile.png)
+
 ### HTML
 
 1. **Doctype and Structure**: The structure is good. The `<!DOCTYPE html>` declaration and the `<html>`, `<head>`, and `<body>` elements are correctly used.
@@ -38,3 +46,4 @@ Explore Samarkand with our comprehensive guide detailing its rich history, iconi
 
 5. **CSS File**:
    - It looks like the CSS code is partially included. Ensure the file is complete and saved correctly.
+
