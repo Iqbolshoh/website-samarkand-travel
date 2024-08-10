@@ -33,15 +33,6 @@ The Samarkand Travel Guide provides tourists and history enthusiasts with detail
 
 ![Mobile View](./images/mobile.png)
 
-## Technologies Used
-
-This project is built using the following technologies:
-
-<div style="display: flex; flex-wrap: wrap; gap: 5px;">
-    <img src="https://img.shields.io/badge/HTML-%23F06529.svg?style=for-the-badge&logo=html5&logoColor=white" alt="HTML">
-    <img src="https://img.shields.io/badge/CSS-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" alt="CSS">
-</div>
-
 ## Getting Started
 
 To get a local copy up and running, follow these simple steps:
@@ -88,6 +79,15 @@ If you have suggestions for improvements, please fork the repo and create a pull
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
+
+## Technologies Used
+
+This project is built using the following technologies:
+
+<div style="display: flex; flex-wrap: wrap; gap: 5px;">
+    <img src="https://img.shields.io/badge/HTML-%23F06529.svg?style=for-the-badge&logo=html5&logoColor=white" alt="HTML">
+    <img src="https://img.shields.io/badge/CSS-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" alt="CSS">
+</div>
 
 ## Connect with Me
 
