@@ -47,3 +47,10 @@ Explore Samarkand with our comprehensive guide detailing its rich history, iconi
 5. **CSS File**:
    - It looks like the CSS code is partially included. Ensure the file is complete and saved correctly.
 
+## Technologies
+
+<div style="display: flex; flex-wrap: wrap; gap: 5px;">
+    <img src="https://img.shields.io/badge/HTML-%23F06529.svg?style=for-the-badge&logo=html5&logoColor=white"
+        alt="HTML">
+    <img src="https://img.shields.io/badge/CSS-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" alt="CSS">
+</div>
