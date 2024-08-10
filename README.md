@@ -2,7 +2,15 @@
 
 Welcome to the Samarkand Travel Guide! This project is a comprehensive guide to exploring the historic city of Samarkand, Uzbekistan. Discover the city's rich history, iconic landmarks, vibrant museums, and much more.
 
-![Samarkand Travel Guide Banner](./images/banner.png)
+## Preview
+
+### Desktop
+
+![Desktop Preview](./images/desktop.png)
+
+### Mobile
+
+![Mobile Preview](./images/mobile.png)
 
 ## Table of Contents
 
@@ -25,13 +33,6 @@ The Samarkand Travel Guide provides tourists and history enthusiasts with detail
 - **Rich Content**: Includes detailed information on Samarkand's history, landmarks, museums, and tours.
 - **Visual Appeal**: Uses high-quality images to showcase the beauty of Samarkand.
 - **User-Friendly Navigation**: Easy-to-use navigation links that allow users to quickly access different sections of the guide.
-### Desktop View
-
-![Desktop View](./images/desktop.png)
-
-### Mobile View
-
-![Mobile View](./images/mobile.png)
 
 ## Getting Started
 
