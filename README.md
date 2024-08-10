@@ -89,6 +89,10 @@ This project is built using the following technologies:
     <img src="https://img.shields.io/badge/CSS-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" alt="CSS">
 </div>
 
+## Contributing
+
+Feel free to submit pull requests or open issues if you have suggestions for improvements or encounter any problems.
+
 ## Connect with Me
 
 I love connecting with new people and exploring new opportunities. Feel free to reach out to me through any of the platforms below:
