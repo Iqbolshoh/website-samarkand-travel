@@ -18,6 +18,21 @@ Welcome to the Samarkand Travel Guide! This project is a comprehensive guide to 
 
 The Samarkand Travel Guide provides tourists and history enthusiasts with detailed information about Samarkand's most notable sites. The guide includes sections on the city's history, landmarks, museums, tours, and more.
 
+
+## Features
+
+- **Responsive Design**: The website is optimized for both desktop and mobile devices.
+- **Rich Content**: Includes detailed information on Samarkand's history, landmarks, museums, and tours.
+- **Visual Appeal**: Uses high-quality images to showcase the beauty of Samarkand.
+- **User-Friendly Navigation**: Easy-to-use navigation links that allow users to quickly access different sections of the guide.
+### Desktop View
+
+![Desktop View](./images/desktop.png)
+
+### Mobile View
+
+![Mobile View](./images/mobile.png)
+
 ## Technologies Used
 
 This project is built using the following technologies:
@@ -26,13 +41,6 @@ This project is built using the following technologies:
     <img src="https://img.shields.io/badge/HTML-%23F06529.svg?style=for-the-badge&logo=html5&logoColor=white" alt="HTML">
     <img src="https://img.shields.io/badge/CSS-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" alt="CSS">
 </div>
-
-## Features
-
-- **Responsive Design**: The website is optimized for both desktop and mobile devices.
-- **Rich Content**: Includes detailed information on Samarkand's history, landmarks, museums, and tours.
-- **Visual Appeal**: Uses high-quality images to showcase the beauty of Samarkand.
-- **User-Friendly Navigation**: Easy-to-use navigation links that allow users to quickly access different sections of the guide.
 
 ## Getting Started
 
@@ -68,14 +76,6 @@ You will need the following installed on your local machine:
 ## Usage
 
 Simply open the `index.html` file in your web browser to view the travel guide. The site is fully responsive and will adjust based on the screen size of your device.
-
-### Desktop View
-
-![Desktop View](./images/calculator-screenshot.png)
-
-### Mobile View
-
-![Mobile View](./images/mobile.png)
 
 ## Contributing
 
