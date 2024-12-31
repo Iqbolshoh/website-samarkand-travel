@@ -38,13 +38,6 @@ The Samarkand Travel Guide provides tourists and history enthusiasts with detail
 
 To get a local copy up and running, follow these simple steps:
 
-### Prerequisites
-
-You will need the following installed on your local machine:
-
-- A modern web browser (e.g., Chrome, Firefox)
-- A text editor (e.g., VS Code, Sublime Text)
-
 ### Installation
 
 1. **Clone the repo**:
