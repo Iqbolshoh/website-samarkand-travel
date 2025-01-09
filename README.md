@@ -6,11 +6,11 @@ Welcome to the Samarkand Travel Guide! This project is a comprehensive guide to 
 
 ### Desktop
 
-![Desktop Preview](./images/desktop.png)
+![Desktop Preview](./src/images/desktop.png)
 
 ### Mobile
 
-![Mobile Preview](./images/mobile.png)
+![Mobile Preview](./src/images/mobile.png)
 
 ## Table of Contents
 
