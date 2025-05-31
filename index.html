@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Samarkand Travel Guide - Discover the Pearl of the Silk Road</title>
+    <title>About Samarkand - Unveil the Silk Road's Gem</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&family=Poppins:wght@300;400;600&display=swap"
         rel="stylesheet">
     <style>
         * {
@@ -17,9 +17,9 @@
         }
 
         body {
-            font-family: 'Roboto', sans-serif;
-            color: #333;
-            background-color: #f8f1e9;
+            font-family: 'Poppins', sans-serif;
+            color: #2d3436;
+            background-color: #f7f9fb;
             overflow-x: hidden;
         }
 
@@ -28,51 +28,53 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: linear-gradient(135deg, #1a3c6b 0%, #2a5d9b 100%);
-            color: white;
+            background: linear-gradient(135deg, #0c3f6a 0%, #1b6ca8 100%);
+            color: #fff;
             z-index: 1000;
-            transition: background-color 0.3s ease;
+            transition: all 0.5s ease;
         }
 
         header.scrolled {
-            background: rgba(26, 60, 107, 0.95);
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            background: rgba(12, 63, 106, 0.92);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
         }
 
         .header-content {
-            max-width: 1200px;
+            max-width: 1500px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 25px 50px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .header-content h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            letter-spacing: 1px;
+            font-family: 'EB Garamond', serif;
+            font-size: 3rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #f1c40f;
         }
 
         nav a {
-            color: white;
+            color: #fff;
             text-decoration: none;
-            margin: 0 20px;
-            font-size: 1.1rem;
+            margin: 0 30px;
+            font-size: 1.3rem;
             font-weight: 400;
             position: relative;
-            transition: color 0.3s ease;
+            transition: color 0.4s ease;
         }
 
         nav a::after {
             content: '';
             position: absolute;
             width: 0;
-            height: 2px;
-            background-color: #f4d35e;
-            bottom: -5px;
+            height: 3px;
+            background-color: #54a0ff;
+            bottom: -8px;
             left: 0;
-            transition: width 0.3s ease;
+            transition: width 0.5s ease;
         }
 
         nav a:hover::after {
@@ -80,7 +82,7 @@
         }
 
         nav a:hover {
-            color: #f4d35e;
+            color: #54a0ff;
         }
 
         /* Hero Section */
@@ -91,8 +93,9 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            color: white;
+            color: #fff;
             position: relative;
+            overflow: hidden;
         }
 
         .hero::before {
@@ -102,56 +105,63 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.5);
+            background: linear-gradient(rgba(12, 63, 106, 0.65), rgba(84, 160, 255, 0.35));
         }
 
         .hero-content {
             position: relative;
             z-index: 1;
+            max-width: 900px;
+            padding: 30px;
         }
 
         .hero h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 4rem;
-            margin-bottom: 20px;
-            animation: fadeInDown 1s ease-out;
+            font-family: 'EB Garamond', serif;
+            font-size: 5rem;
+            margin-bottom: 25px;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+            animation: fadeInDown 1.5s ease-out;
         }
 
         .hero p {
-            font-size: 1.5rem;
-            margin-bottom: 30px;
-            animation: fadeInUp 1s ease-out 0.3s;
+            font-size: 1.8rem;
+            margin-bottom: 50px;
+            animation: fadeInUp 1.5s ease-out 0.4s;
             animation-fill-mode: backwards;
         }
 
         .cta-button {
-            background-color: #f4d35e;
-            color: #1a3c6b;
-            padding: 15px 30px;
-            border-radius: 25px;
+            background: #f1c40f;
+            color: #0c3f6a;
+            padding: 20px 50px;
+            border-radius: 50px;
             text-decoration: none;
+            font-family: 'EB Garamond', serif;
+            font-size: 1.4rem;
             font-weight: 600;
-            font-size: 1.2rem;
-            transition: background-color 0.3s ease, transform 0.3s ease;
+            transition: all 0.4s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
 
         .cta-button:hover {
-            background-color: #e0c13b;
-            transform: scale(1.05);
+            background: #dfe6e9;
+            color: #1b6ca8;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
         }
 
         /* Main Content */
         main {
-            max-width: 1200px;
-            margin: 80px auto 20px;
-            padding: 20px;
+            max-width: 1500px;
+            margin: 120px auto 50px;
+            padding: 0 50px;
         }
 
         section {
-            margin-bottom: 60px;
+            margin-bottom: 100px;
             opacity: 0;
-            transform: translateY(50px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
+            transform: translateY(80px);
+            transition: all 1s ease;
         }
 
         section.visible {
@@ -160,254 +170,469 @@
         }
 
         section h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            color: #1a3c6b;
-            border-bottom: 3px solid #f4d35e;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
+            font-family: 'EB Garamond', serif;
+            font-size: 3.5rem;
+            color: #0c3f6a;
+            border-bottom: 5px solid #54a0ff;
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+            text-transform: uppercase;
         }
 
         section p {
-            line-height: 1.8;
-            font-size: 1.1rem;
-            color: #555;
-            margin-bottom: 20px;
+            line-height: 2;
+            font-size: 1.3rem;
+            color: #2d3436;
+            margin-bottom: 30px;
         }
 
         .landmark-card {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
         }
 
         .card {
-            flex: 1 1 300px;
-            background: white;
-            border-radius: 10px;
+            background: #fff;
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transition: all 0.5s ease;
         }
 
         .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            transform: translateY(-20px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
         }
 
         .card img {
             width: 100%;
-            height: 200px;
+            height: 300px;
             object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .card:hover img {
+            transform: scale(1.15);
         }
 
         .card-content {
-            padding: 20px;
+            padding: 30px;
         }
 
         .card h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.5rem;
-            color: #1a3c6b;
-            margin-bottom: 10px;
+            font-family: 'EB Garamond', serif;
+            font-size: 2rem;
+            color: #0c3f6a;
+            margin-bottom: 20px;
         }
 
         .card p {
-            font-size: 1rem;
-            color: #666;
+            font-size: 1.2rem;
+            color: #636e72;
         }
 
-        /* Gallery Section */
+        /* Interactive Gallery */
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
+            grid-template-columns: repeat();
+            autosony: true;
+            gap: 30px;
+            margin-top: 40px;
+            }
 
-        .gallery img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 10px;
-            transition: transform 0.3s ease;
-        }
+            .gallery-item {
+                position: relative;
+                overflow: hidden;
+                border-radius: 20px;
+                cursor: pointer;
+            }
 
-        .gallery img:hover {
-            transform: scale(1.05);
-        }
+            .gallery-item img {
+                width: 100%;
+                height: 250px;
+                object-fit: cover;
+                transition: transform 0.6s ease;
+            }
 
-        /* Footer */
-        footer {
-            background: linear-gradient(135deg, #1a3c6b 0%, #2a5d9b 100%);
-            color: white;
-            text-align: center;
-            padding: 20px;
-            font-size: 1rem;
-        }
+            .gallery-item:hover img {
+                transform: scale(1.2);
+            }
 
-        footer p {
-            margin: 0;
-        }
-
-        /* Animations */
-        @keyframes fadeInDown {
-            from {
+            .gallery-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(12, 63, 106, 0.75);
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 opacity: 0;
-                transform: translateY(-50px);
+                transition: opacity 0.5s ease;
             }
 
-            to {
+            .gallery-item:hover .gallery-overlay {
                 opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
             }
 
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Responsive Design */
-        @media (max-width: 1024px) {
-            .header-content h1 {
-                font-size: 2rem;
-            }
-
-            .hero h2 {
-                font-size: 3rem;
-            }
-
-            .hero p {
-                font-size: 1.2rem;
-            }
-
-            main {
+            .gallery-overlay span {
+                color: #fff;
+                font-family: 'EB Garamond', serif;
+                font-size: 1.6rem;
+                text-align: center;
                 padding: 15px;
             }
-        }
 
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
+            /* Timeline Section */
+            .timeline {
+                position: relative;
+                padding: 20px 0;
+            }
+
+            .timeline::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 50%;
+                width: 4px;
+                height: 100%;
+                background: #54a0ff;
+                transform: translateX(-50%);
+            }
+
+            .timeline-item {
+                display: flex;
+                align-items: center;
+                margin: 40px 0;
+                position: relative;
+            }
+
+            .timeline-item:nth-child(even) {
+                flex-direction: row-reverse;
+            }
+
+            .timeline-content {
+                background: #fff;
+                padding: 20px;
+                border-radius: 15px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                width: 45%;
+                transition: transform 0.4s ease;
+            }
+
+            .timeline-item:hover .timeline-content {
+                transform: translateY(-10px);
+            }
+
+            .timeline-content h3 {
+                font-family: 'EB Garamond', serif;
+                font-size: 1.8rem;
+                color: #0c3f6a;
+                margin-bottom: 10px;
+            }
+
+            .timeline-content p {
+                font-size: 1.1rem;
+                color: #636e72;
+            }
+
+            .timeline-marker {
+                width: 20px;
+                height: 20px;
+                background: #f1c40f;
+                border-radius: 50%;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                box-shadow: 0 0 10px rgba(241, 196, 15, 0.5);
+            }
+
+            /* Footer */
+            footer {
+                background: linear-gradient(135deg, #0c3f6a 0%, #1b6ca8 100%);
+                color: #fff;
                 text-align: center;
+                padding: 40px;
+                font-size: 1.2rem;
+                position: relative;
             }
 
-            .header-content h1 {
-                font-size: 1.5rem;
+            footer p {
+                margin: 0;
+                font-family: 'EB Garamond', serif;
             }
 
-            nav a {
-                margin: 10px 15px;
-                font-size: 1rem;
+            footer a {
+                color: #54a0ff;
+                text-decoration: none;
+                margin-left: 15px;
+                transition: color 0.3s ease;
             }
 
-            .hero h2 {
+            footer a:hover {
+                color: #f1c40f;
+            }
+
+            /* Modal for Gallery */
+            .modal {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.85);
+                z-index: 2000;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .modal-content {
+                max-width: 95%;
+                max-height: 95%;
+                border-radius: 15px;
+                overflow: hidden;
+                position: relative;
+            }
+
+            .modal-content img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+
+            .modal-close {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                color: #fff;
                 font-size: 2.5rem;
+                cursor: pointer;
+                background: #0c3f6a;
+                border-radius: 50%;
+                padding: 8px 15px;
+                transition: background 0.3s ease;
             }
 
-            .hero p {
-                font-size: 1rem;
+            .modal-close:hover {
+                background: #54a0ff;
             }
 
-            .card {
-                flex: 1 1 100%;
+            /* Animations */
+            @keyframes fadeInDown {
+                from {
+                    opacity: 0;
+                    transform: translateY(-80px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
             }
-        }
+
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(80px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            /* Responsive Design */
+            @media (max-width: 1200px) {
+                .header-content {
+                    padding: 20px 30px;
+                }
+
+                .header-content h1 {
+                    font-size: 2.5rem;
+                }
+
+                .hero h2 {
+                    font-size: 4rem;
+                }
+
+                .hero p {
+                    font-size: 1.5rem;
+                }
+
+                .timeline-content {
+                    width: 48%;
+                }
+            }
+
+            @media (max-width: 768px) {
+                .header-content {
+                    flex-direction: column;
+                    text-align: center;
+                }
+
+                .header-content h1 {
+                    font-size: 2rem;
+                }
+
+                nav a {
+                    margin: 10px 15px;
+                    font-size: 1.1rem;
+                }
+
+                .hero h2 {
+                    font-size: 3rem;
+                }
+
+                .hero p {
+                    font-size: 1.2rem;
+                }
+
+                .card {
+                    flex: 1 1 100%;
+                }
+
+                main {
+                    padding: 0 20px;
+                }
+
+                .timeline::before {
+                    left: 30px;
+                }
+
+                .timeline-item {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+
+                .timeline-item:nth-child(even) {
+                    flex-direction: column;
+                }
+
+                .timeline-content {
+                    width: 100%;
+                    margin-left: 50px;
+                }
+
+                .timeline-marker {
+                    left: 30px;
+                }
+            }
     </style>
 </head>
 
 <body>
     <header>
         <div class="header-content">
-            <h1>Samarkand Travel Guide</h1>
+            <h1>About Samarkand</h1>
             <nav>
                 <a href="#history">History</a>
                 <a href="#landmarks">Landmarks</a>
                 <a href="#museums">Museums</a>
+                <a href="#gallery">Gallery</a>
             </nav>
         </div>
     </header>
 
     <section class="hero">
         <div class="hero-content">
-            <h2>Discover Samarkand</h2>
-            <p>The Pearl of the Silk Road awaits you with its timeless beauty and rich history.</p>
-            <a href="#landmarks" class="cta-button">Explore Now</a>
+            <h2>Unveil Samarkand</h2>
+            <p>Embark on a journey through time to the heart of the Silk Road, where history and beauty intertwine.</p>
+            <a href="#landmarks" class="cta-button">Begin About Your</a>
         </div>
     </section>
 
     <main>
         <section id="history">
             <h2>History of Samarkand</h2>
-            <p>Founded in the 8th century BC, Samarkand was the capital of the ancient state of Sogdiana, as mentioned
-                in the Zoroastrian book "Avesta." Known as Marakanda to the Romans and Greeks, it was conquered by
-                Alexander the Great in 329 BC. Samarkand flourished as a key stop on the Great Silk Road and became the
-                capital of Amir Timur's empire, experiencing significant cultural and architectural growth.</p>
-            <p>In 1868, Russian forces conquered Samarkand, and it later became part of the Turkestan ASSR after the
-                1917 revolution. From 1925 to 1939, it served as the capital of Uzbekistan. Today, Samarkand is a UNESCO
-                World Heritage Site, blending ancient traditions with modernity.</p>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>8th Century BC</h3>
+                        <p>Samarkand, known as Marakanda, is founded as the capital of Sogdiana, as noted in the
+                            Zoroastrian "Avesta."</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>329 BC</h3>
+                        <p>Alexander the Great conquers Samarkand, marking its significance on the Great Silk Road.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>14th Century</h3>
+                        <p>Amir Timur establishes Samarkand as the capital of his empire, ushering in a golden age of
+                            culture and architecture.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>1868</h3>
+                        <p>Russian forces conquer Samarkand, integrating it into the Russian Empire.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>1925–1939</h3>
+                        <p>Samarkand serves as the capital of Uzbekistan, later becoming a UNESCO World Heritage Site.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section id="landmarks">
-            <h2>Landmarks and Attractions</h2>
-            <p>Samarkand is renowned for its stunning medieval architecture, with landmarks that captivate visitors from
-                around the world.</p>
+            <h2>Landmarks & Wonders</h2>
+            <p>Discover Samarkand’s architectural masterpieces, adorned with intricate tilework and majestic domes.</p>
             <div class="landmark-card">
                 <div class="card">
                     <img src="https://images.unsplash.com/photo-1596456142463-b0b8f7d25e1e" alt="Registan Square">
                     <div class="card-content">
                         <h3>Registan Square</h3>
-                        <p>The heart of Samarkand, featuring three majestic madrassahs: Ulugbek (1420), Sherdor (1636),
-                            and Tillya-Kari (1660). A UNESCO World Heritage Site, this architectural ensemble is a
-                            testament to the city's historical significance.</p>
+                        <p>The heart of Samarkand, featuring the Ulugbek (1420), Sherdor (1636), and Tillya-Kari (1660)
+                            madrassahs, a UNESCO World Heritage Site.</p>
                     </div>
                 </div>
                 <div class="card">
                     <img src="https://images.unsplash.com/photo-1596456142463-b0b8f7d25e1e" alt="Gur-Emir Mausoleum">
                     <div class="card-content">
                         <h3>Gur-Emir Mausoleum</h3>
-                        <p>The final resting place of Amir Timur and his family, built in 1404. This majestic mausoleum
-                            is a symbol of Samarkand's cultural and architectural grandeur during the Timurid dynasty.
-                        </p>
+                        <p>Built in 1404, this mausoleum is the resting place of Amir Timur, famed for its turquoise
+                            dome and intricate mosaics.</p>
                     </div>
                 </div>
                 <div class="card">
                     <img src="https://images.unsplash.com/photo-1596456142463-b0b8f7d25e1e" alt="Bibi-Khanum Mosque">
                     <div class="card-content">
                         <h3>Bibi-Khanum Mosque</h3>
-                        <p>Constructed in 1404 for Amir Timur's wife, this mosque features a large stone Quran platform
-                            and intricate architectural details, reflecting the city's historical splendor.</p>
+                        <p>Constructed in 1404 for Amir Timur’s wife, this mosque features a grand stone Quran platform
+                            and stunning architecture.</p>
                     </div>
                 </div>
-            </div>
-            <div class="gallery">
-                <img src="https://images.unsplash.com/photo-1596456142463-b0b8f7d25e1e" alt="Shahi Zinda">
-                <img src="https://images.unsplash.com/photo-1596456142463-b0b8f7d25e1e" alt="Ulugbek Observatory">
-                <img src="https://images.unsplash.com/photo-1596456142463-b0b8f7d25e1e" alt="Saint Daniel's Tomb">
             </div>
         </section>
 
         <section id="museums">
             <h2>Museums of Samarkand</h2>
-            <p>Samarkand's museums offer a deep dive into its rich history and cultural heritage, showcasing artifacts
-                and stories from centuries past.</p>
+            <p>Delve into Samarkand’s rich heritage through its museums, preserving centuries-old artifacts and stories.
+            </p>
             <div class="landmark-card">
                 <div class="card">
                     <img src="https://images.unsplash.com/photo-1596456142463-b0b8f7d25e1e" alt="Afrosiab Museum">
                     <div class="card-content">
                         <h3>Afrosiab Museum</h3>
-                        <p>Located near the ancient Afrosiab site, this museum displays artifacts from the 8th century
-                            BC, including frescoes from a Samanid palace, offering insights into Samarkand's ancient
-                            history.</p>
+                        <p>Located near the ancient Afrosiab site, this museum displays 8th-century BC artifacts,
+                            including Samanid palace frescoes.</p>
                     </div>
                 </div>
                 <div class="card">
@@ -415,17 +640,43 @@
                         alt="Ulugbek Observatory Museum">
                     <div class="card-content">
                         <h3>Ulugbek Observatory Museum</h3>
-                        <p>Chronicles the scientific advancements of Mirzo Ulugbek, featuring a reconstructed
-                            observatory and a unique sextant used for astronomical observations in the 15th century.</p>
+                        <p>Showcases Mirzo Ulugbek’s 15th-century astronomical achievements with a reconstructed
+                            observatory and sextant.</p>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery">
+            <h2>Visual Journey</h2>
+            <p>Experience the vibrant beauty of Samarkand through these captivating images.</p>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1596456142463-b0b8f7d25e1e" alt="Shahi Zinda">
+                    <div class="gallery-overlay"><span>Shahi Zinda</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1596456142463-b0b8f7d25e1e" alt="Ulugbek Observatory">
+                    <div class="gallery-overlay"><span>Ulugbek Observatory</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1596456142463-b0b8f7d25e1e" alt="Saint Daniel's Tomb">
+                    <div class="gallery-overlay"><span>Saint Daniel's Tomb</span></div>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>© 2025 Samarkand Travel Guide. All rights reserved.</p>
+        <p>© 2025 About Samarkand. All rights reserved. <a href="#contact">Contact Us</a></p>
     </footer>
+
+    <div class="modal" id="galleryModal">
+        <div class="modal-content">
+            <span class="modal-close">×</span>
+            <img src="" alt="Gallery Image">
+        </div>
+    </div>
 
     <script>
         // Smooth Scroll
@@ -452,7 +703,7 @@
                     entry.target.classList.add('visible');
                 }
             });
-        }, { threshold: 0.1 });
+        }, { threshold: 0.15 });
 
         sections.forEach(section => {
             observer.observe(section);
@@ -464,5 +715,75 @@
             const scrollPosition = window.scrollY;
             hero.style.backgroundPositionY = `${scrollPosition * 0.5}px`;
         });
+
+        // Gallery Modal
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const modal = document.getElementById('galleryModal');
+        const modalImg = modal.querySelector('img');
+        const closeModal = modal.querySelector('.modal-close');
+
+        galleryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                modalImg.src = item.querySelector('img').src;
+                modal.style.display = 'flex';
+            });
+        });
+
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        // Lazy Load Images
+        const images = document.querySelectorAll('img');
+        const imgObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src || img.src;
+                    imgObserver.unobserve(img);
+                }
+            });
+        });
+
+        images.forEach(img => {
+            img.dataset.src = img.src;
+            img.src = '';
+            imgObserver.observe(img);
+        });
+
+        // Scroll to Top Button
+        const scrollTopBtn = document.createElement('button');
+        scrollTopBtn.innerHTML = '↑';
+        scrollTopBtn.style.position = 'fixed';
+        scrollTopBtn.style.bottom = '40px';
+        scrollTopBtn.style.right = '40px';
+        scrollTopBtn.style.background = '#f1c40f';
+        scrollTopBtn.style.color = '#0c3f6a';
+        scrollTopBtn.style.border = 'none';
+        scrollTopBtn.style.borderRadius = '50%';
+        scrollTopBtn.style.width = '50px';
+        scrollTopBtn.style.height = '50px';
+        scrollTopBtn.style.fontSize = '1.5rem';
+        scrollTopBtn.style.cursor = 'pointer';
+        scrollTopBtn.style.opacity = '0';
+        scrollTopBtn.style.transition = 'opacity 0.3s ease';
+        scrollTopBtn.style.zIndex = '1000';
+        document.body.appendChild(scrollTopBtn);
+
+        window.addEventListener('scroll', () => {
+            scrollTopBtn.style.opacity = window.scrollY > 300 ? '1' : '0';
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
     </script>
 </body>
+
+</html>
