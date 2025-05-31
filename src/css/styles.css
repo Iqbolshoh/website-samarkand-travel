@@ -74,6 +74,7 @@ nav.nav-menu a::before {
     bottom: 0;
     left: 50%;
     width: 0;
+    background-color: #f5c518;
     height: 2px;
     transition: width 0.4s ease, left 0.4s ease;
 }
