@@ -16,18 +16,6 @@ Welcome to the **Samarkand Travel Guide**! This project is a comprehensive guide
 
 ---
 
-## 📑 Table of Contents
-
-- [ℹ️ About the Project](#️about-the-project)
-- [🛠️ Technologies Used](#technologies-used)
-- [✨ Features](#features)
-- [⚙️ Getting Started](#getting-started)
-- [🚀 Usage](#usage)
-- [🤝 Contributing](#contributing)
-- [📬 Contact](#contact)
-
----
-
 ## ℹ️ About the Project
 
 The **Samarkand Travel Guide** provides tourists and history enthusiasts with detailed information about Samarkand's most notable sites. The guide includes sections on the city's history, landmarks, museums, tours, and more.
