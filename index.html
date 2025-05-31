@@ -2,659 +2,40 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title data-lang-key="title">About Samarkand - Silk Road's Jewel</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@300;400;600&display=swap"
-        rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Roboto', sans-serif;
-            color: #1f2a44;
-            background-color: #f9fafb;
-            overflow-x: hidden;
-        }
-
-        /* Header Styles */
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: linear-gradient(135deg, #004aad 0%, #0077cc 100%);
-            color: #fff;
-            z-index: 1000;
-            transition: all 0.7s ease;
-        }
-
-        header.scrolled {
-            background: rgba(0, 74, 173, 0.92);
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
-        }
-
-        .header-content {
-            max-width: 1700px;
-            margin: 0 auto;
-            padding: 25px 70px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .header-content h1 {
-            font-family: 'Merriweather', serif;
-            font-size: 3rem;
-            letter-spacing: 3px;
-            color: #ffcc00;
-            text-transform: uppercase;
-        }
-
-        nav {
-            display: flex;
-            align-items: center;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 30px;
-            font-size: 1.3rem;
-            font-weight: 400;
-            position: relative;
-            transition: color 0.5s ease;
-        }
-
-        nav a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 3px;
-            background-color: #c8102e;
-            bottom: -8px;
-            left: 0;
-            transition: width 0.5s ease;
-        }
-
-        nav a:hover::after {
-            width: 100%;
-        }
-
-        nav a:hover {
-            color: #c8102e;
-        }
-
-        .lang-switcher {
-            display: flex;
-            gap: 10px;
-        }
-
-        .lang-btn {
-            background: none;
-            border: 2px solid #fff;
-            color: #fff;
-            padding: 8px 15px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .lang-btn.active,
-        .lang-btn:hover {
-            background: #c8102e;
-            border-color: #c8102e;
-        }
-
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            background: url('https://images.unsplash.com/photo-1596456142463-b0b8f7d25e1e') no-repeat center center/cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: #fff;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(rgba(0, 74, 173, 0.55), rgba(0, 128, 55, 0.25));
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            max-width: 1100px;
-            padding: 50px;
-        }
-
-        .hero h2 {
-            font-family: 'Merriweather', serif;
-            font-size: 6rem;
-            margin-bottom: 25px;
-            text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
-            animation: slideInDown 2s ease-out;
-        }
-
-        .hero p {
-            font-size: 1.9rem;
-            margin-bottom: 50px;
-            animation: fadeInUp 2s ease-out 0.6s;
-            animation-fill-mode: backwards;
-        }
-
-        .cta-button {
-            background: #ffcc00;
-            color: #004aad;
-            padding: 20px 60px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-family: 'Merriweather', serif;
-            font-size: 1.6rem;
-            font-weight: 700;
-            transition: all 0.6s ease;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-        }
-
-        .cta-button:hover {
-            background: #fff;
-            color: #c8102e;
-            transform: translateY(-8px) scale(1.1);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
-        }
-
-        /* Main Content */
-        main {
-            max-width: 1700px;
-            margin: 140px auto 80px;
-            padding: 0 70px;
-        }
-
-        section {
-            margin-bottom: 140px;
-            opacity: 0;
-            transform: translateY(120px);
-            transition: all 1.5s ease;
-        }
-
-        section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        section h2 {
-            font-family: 'Merriweather', serif;
-            font-size: 4.5rem;
-            color: #004aad;
-            border-bottom: 8px solid #008037;
-            padding-bottom: 20px;
-            margin-bottom: 50px;
-            text-transform: uppercase;
-            position: relative;
-        }
-
-        section h2::after {
-            content: '';
-            position: absolute;
-            width: 150px;
-            height: 5px;
-            background: #c8102e;
-            bottom: -25px;
-            left: 0;
-            animation: slideInLeft 1.2s ease-out;
-        }
-
-        section p {
-            line-height: 2.2;
-            font-size: 1.5rem;
-            color: #2d3748;
-            margin-bottom: 35px;
-        }
-
-        .landmark-card {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-            gap: 60px;
-            margin-top: 60px;
-        }
-
-        .card {
-            background: #fff;
-            border-radius: 30px;
-            overflow: hidden;
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
-            transition: all 0.7s ease;
-            position: relative;
-        }
-
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(rgba(0, 74, 173, 0.15), rgba(255, 255, 255, 0));
-            opacity: 0;
-            transition: opacity 0.6s ease;
-        }
-
-        .card:hover::before {
-            opacity: 1;
-        }
-
-        .card:hover {
-            transform: translateY(-20px) rotate(3deg);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
-        }
-
-        .card img {
-            width: 100%;
-            height: 350px;
-            object-fit: cover;
-            transition: transform 0.8s ease;
-        }
-
-        .card:hover img {
-            transform: scale(1.25);
-        }
-
-        .card-content {
-            padding: 40px;
-        }
-
-        .card h3 {
-            font-family: 'Merriweather', serif;
-            font-size: 2.5rem;
-            color: #004aad;
-            margin-bottom: 25px;
-        }
-
-        .card p {
-            font-size: 1.4rem;
-            color: #4a5568;
-        }
-
-        /* Interactive Gallery */
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 50px;
-            margin-top: 60px;
-        }
-
-        .gallery-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 30px;
-            cursor: pointer;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            transition: transform 1s ease;
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.3) rotate(5deg);
-        }
-
-        .gallery-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 74, 173, 0.85);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: opacity 0.7s ease;
-        }
-
-        .gallery-item:hover .gallery-overlay {
-            opacity: 1;
-        }
-
-        .gallery-overlay span {
-            color: #ffcc00;
-            font-family: 'Merriweather', serif;
-            font-size: 2rem;
-            text-align: center;
-            padding: 25px;
-            transform: translateY(30px);
-            transition: transform 0.7s ease;
-        }
-
-        .gallery-item:hover .gallery-overlay span {
-            transform: translateY(0);
-        }
-
-        /* Timeline Section */
-        .timeline {
-            position: relative;
-            padding: 50px 0;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 50%;
-            width: 6px;
-            height: 100%;
-            background: linear-gradient(#008037, #c8102e);
-            transform: translateX(-50%);
-        }
-
-        .timeline-item {
-            display: flex;
-            align-items: center;
-            margin: 60px 0;
-            position: relative;
-            opacity: 0;
-            transition: opacity 1.2s ease, transform 1.2s ease;
-        }
-
-        .timeline-item.visible {
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-        .timeline-item:nth-child(odd) {
-            transform: translateX(-120px);
-        }
-
-        .timeline-item:nth-child(even) {
-            transform: translateX(120px);
-            flex-direction: row-reverse;
-        }
-
-        .timeline-content {
-            background: #fff;
-            padding: 30px;
-            border-radius: 25px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-            width: 45%;
-            transition: transform 0.6s ease;
-        }
-
-        .timeline-item:hover .timeline-content {
-            transform: translateY(-15px);
-        }
-
-        .timeline-content h3 {
-            font-family: 'Merriweather', serif;
-            font-size: 2.2rem;
-            color: #004aad;
-            margin-bottom: 20px;
-        }
-
-        .timeline-content p {
-            font-size: 1.3rem;
-            color: #4a5568;
-        }
-
-        .timeline-marker {
-            width: 30px;
-            height: 30px;
-            background: #ffcc00;
-            border: 4px solid #008037;
-            border-radius: 50%;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            box-shadow: 0 0 20px rgba(255, 204, 0, 0.8);
-            animation: pulse 2.5s infinite;
-        }
-
-        /* Footer */
-        footer {
-            background: linear-gradient(135deg, #004aad 0%, #0077cc 100%);
-            color: #fff;
-            text-align: center;
-            padding: 60px;
-            font-size: 1.4rem;
-            position: relative;
-        }
-
-        footer p {
-            margin: 0;
-            font-family: 'Merriweather', serif;
-        }
-
-        footer a {
-            color: #c8102e;
-            text-decoration: none;
-            margin-left: 25px;
-            transition: color 0.5s ease;
-        }
-
-        footer a:hover {
-            color: #ffcc00;
-        }
-
-        /* Modal for Gallery */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.95);
-            z-index: 2000;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .modal-content {
-            max-width: 95%;
-            max-height: 95%;
-            border-radius: 25px;
-            overflow: hidden;
-            position: relative;
-            animation: zoomIn 0.6s ease-out;
-        }
-
-        .modal-content img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .modal-close {
-            position: absolute;
-            top: 30px;
-            right: 30px;
-            color: #fff;
-            font-size: 3.5rem;
-            cursor: pointer;
-            background: #004aad;
-            border-radius: 50%;
-            padding: 12px 18px;
-            transition: all 0.5s ease;
-        }
-
-        .modal-close:hover {
-            background: #c8102e;
-            transform: rotate(180deg);
-        }
-
-        /* Animations */
-        @keyframes slideInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-120px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(120px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes slideInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-120px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes zoomIn {
-            from {
-                opacity: 0;
-                transform: scale(0.7);
-            }
-
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
-        @keyframes pulse {
-            0% {
-                box-shadow: 0 0 0 0 rgba(255, 204, 0, 0.8);
-            }
-
-            70% {
-                box-shadow: 0 0 0 20px rgba(255, 204, 0, 0);
-            }
-
-            100% {
-                box-shadow: 0 0 0 0 rgba(255, 204, 0, 0);
-            }
-        }
-
-        /* Responsive Design */
-        @media (max-width: 1200px) {
-            .header-content {
-                padding: 20px 50px;
-            }
-
-            .header-content h1 {
-                font-size: 2.6rem;
-            }
-
-            .hero h2 {
-                font-size: 5rem;
-            }
-
-            .hero p {
-                font-size: 1.7rem;
-            }
-
-            .timeline-content {
-                width: 48%;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .header-content h1 {
-                font-size: 2.2rem;
-            }
-
-            nav a {
-                margin: 10px 20px;
-                font-size: 1.2rem;
-            }
-
-            .hero h2 {
-                font-size: 4rem;
-            }
-
-            .hero p {
-                font-size: 1.5rem;
-            }
-
-            .card {
-                flex: 1 1 100%;
-            }
-
-            main {
-                padding: 0 20px;
-            }
-
-            .timeline::before {
-                left: 30px;
-            }
-
-            .timeline-item {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .timeline-item:nth-child(even),
-            .timeline-item:nth-child(odd) {
-                flex-direction: column;
-                transform: translateX(0);
-            }
-
-            .timeline-content {
-                width: 100%;
-                margin-left: 60px;
-            }
-
-            .timeline-marker {
-                left: 30px;
-            }
-        }
-    </style>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./src/css/styles.css" />
 </head>
 
 <body>
     <header>
         <div class="header-content">
-            <h1 data-lang-key="header_title">About Samarkand</h1>
-            <nav>
+            <a href="./"><h1 data-lang-key="header_title">Samarkand</h1></a>
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-menu">
                 <a href="#history" data-lang-key="nav_history">History</a>
                 <a href="#landmarks" data-lang-key="nav_landmarks">Landmarks</a>
                 <a href="#museums" data-lang-key="nav_museums">Museums</a>
                 <a href="#gallery" data-lang-key="nav_gallery">Gallery</a>
                 <div class="lang-switcher">
-                    <button class="lang-btn active" data-lang="en">EN</button>
-                    <button class="lang-btn" data-lang="uz">UZ</button>
+                    <select class="lang-select" onchange="updateLanguage(this.value)">
+                        <option value="en" selected>English</option>
+                        <option value="ru">Русский</option>
+                        <option value="uz">O‘zbek</option>
+                        <option value="tj">Тоҷикӣ</option>
+                        <option value="fa">فارسی</option>
+                        <option value="ar">العربية</option>
+                        <option value="hi">हिन्दी</option>
+                        <option value="zh">中文</option>
+                        <option value="de">Deutsch</option>
+                        <option value="fr">Français</option>
+                    </select>
                 </div>
             </nav>
         </div>
@@ -678,39 +59,39 @@
                     <div class="timeline-content">
                         <h3 data-lang-key="history_8bc_title">8th Century BC</h3>
                         <p data-lang-key="history_8bc_text">Founded as Marakanda, Samarkand becomes the capital of
-                            Sogdiana, as noted in the Zoroastrian "Avesta."</p>
+                            Sogdiana, as mentioned in the Zoroastrian "Avesta."</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3 data-lang-key="history_sasanian_title">3rd–7th Century</h3>
+                        <p data-lang-key="history_sasanian_text">During the Sasanian era, Samarkand remained a key
+                            cultural and trading hub of Central Asia.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <h3 data-lang-key="history_329bc_title">329 BC</h3>
-                        <p data-lang-key="history_329bc_text">Alexander the Great conquers Samarkand, establishing its
-                            significance on the Great Silk Road.</p>
+                        <p data-lang-key="history_329bc_text">Alexander the Great conquers Samarkand, highlighting its
+                            strategic value along the Great Silk Road.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3 data-lang-key="history_samanid_title">9th–10th Century</h3>
+                        <p data-lang-key="history_samanid_text">Under the Samanid Empire, Samarkand flourishes as a
+                            center of science, medicine, and literature in the Islamic Golden Age.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <h3 data-lang-key="history_14c_title">14th Century</h3>
-                        <p data-lang-key="history_14c_text">Amir Timur makes Samarkand the capital of his empire,
-                            ushering in a golden age of culture and architecture.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3 data-lang-key="history_1868_title">1868</h3>
-                        <p data-lang-key="history_1868_text">Russian forces conquer Samarkand, integrating it into the
-                            Russian Empire.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3 data-lang-key="history_1925_title">1925–1939</h3>
-                        <p data-lang-key="history_1925_text">Samarkand serves as Uzbekistan’s capital, later becoming a
-                            UNESCO World Heritage Site.</p>
+                        <p data-lang-key="history_14c_text">Amir Temur (Tamerlane) makes Samarkand the capital of his
+                            vast empire, sparking a golden age of architecture, science, and culture.</p>
                     </div>
                 </div>
             </div>
@@ -722,7 +103,7 @@
                 tilework and majestic domes.</p>
             <div class="landmark-card">
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1596456142463-b0b8f7d25e1e" alt="Registan Square">
+                    <img src="./src/images/registan.png" alt="Registan Square" />
                     <div class="card-content">
                         <h3 data-lang-key="landmark_registan_title">Registan Square</h3>
                         <p data-lang-key="landmark_registan_text">A UNESCO World Heritage Site, featuring the Ulugbek
@@ -730,7 +111,7 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1596456142463-b0b8f7d25e1e" alt="Gur-Emir Mausoleum">
+                    <img src="./src/images/gori-amir.jpeg" alt="Gur-Emir Mausoleum" />
                     <div class="card-content">
                         <h3 data-lang-key="landmark_guremir_title">Gur-Emir Mausoleum</h3>
                         <p data-lang-key="landmark_guremir_text">Built in 1404, this mausoleum houses Amir Timur’s tomb,
@@ -738,7 +119,7 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1596456142463-b0b8f7d25e1e" alt="Bibi-Khanum Mosque">
+                    <img src="./src/images/bibi-khanymjpg.jpg" alt="Bibi-Khanum Mosque" />
                     <div class="card-content">
                         <h3 data-lang-key="landmark_bibikhanum_title">Bibi-Khanum Mosque</h3>
                         <p data-lang-key="landmark_bibikhanum_text">Constructed in 1404 for Amir Timur’s wife, featuring
@@ -754,7 +135,7 @@
                 artifacts and stories.</p>
             <div class="landmark-card">
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1596456142463-b0b8f7d25e1e" alt="Afrosiab Museum">
+                    <img src="./src/images/afrosiab-museum.jpg" alt="Afrosiab Museum" />
                     <div class="card-content">
                         <h3 data-lang-key="museum_afrosiab_title">Afrosiab Museum</h3>
                         <p data-lang-key="museum_afrosiab_text">Showcases 8th-century BC artifacts, including Samanid
@@ -762,8 +143,8 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1596456142463-b0b8f7d25e1e"
-                        alt="Ulugbek Observatory Museum">
+                    <img src="./src/images/ulugbek-museum.jpg"
+                        alt="Ulugbek Observatory Museum" />
                     <div class="card-content">
                         <h3 data-lang-key="museum_ulugbek_title">Ulugbek Observatory Museum</h3>
                         <p data-lang-key="museum_ulugbek_text">Highlights Mirzo Ulugbek’s 15th-century astronomical
@@ -779,15 +160,15 @@
                 images.</p>
             <div class="gallery">
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1596456142463-b0b8f7d25e1e" alt="Shahi Zinda">
+                    <img src="./src/images/shahi_zinda.jpg" alt="Shahi Zinda" />
                     <div class="gallery-overlay"><span data-lang-key="gallery_shahi_zinda">Shahi Zinda</span></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1596456142463-b0b8f7d25e1e" alt="Ulugbek Observatory">
+                    <img src="./src/images/ulugbek-observatory.jpg" alt="Ulugbek Observatory" />
                     <div class="gallery-overlay"><span data-lang-key="gallery_ulugbek">Ulugbek Observatory</span></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1596456142463-b0b8f7d25e1e" alt="Saint Daniel's Tomb">
+                    <img src="./src/images/gallery-daniel.jpg" alt="Saint Daniel's Tomb" />
                     <div class="gallery-overlay"><span data-lang-key="gallery_daniel">Saint Daniel's Tomb</span></div>
                 </div>
             </div>
@@ -799,187 +180,15 @@
                 data-lang-key="footer_contact">Contact Us</a></p>
     </footer>
 
-    <div class="modal" id="galleryModal">
+    <div class="modal" id="galleryModal" style="display:none;">
         <div class="modal-content">
             <span class="modal-close">×</span>
-            <img src="" alt="Gallery Image">
+            <img src="" alt="Gallery Image" id="modalImage" />
         </div>
     </div>
 
-    <script src="lang.js"></script>
-    <script>
-        // Smooth Scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Header Scroll Effect
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            header.classList.toggle('scrolled', window.scrollY > 50);
-        });
-
-        // Animate Sections and Timeline on Scroll
-        const sections = document.querySelectorAll('section, .timeline-item');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 });
-
-        sections.forEach(section => {
-            observer.observe(section);
-        });
-
-        // Parallax Effect for Hero
-        window.addEventListener('scroll', () => {
-            const hero = document.querySelector('.hero');
-            const scrollPosition = window.scrollY;
-            hero.style.backgroundPositionY = `${scrollPosition * 0.7}px`;
-        });
-
-        // Gallery Modal
-        const galleryItems = document.querySelectorAll('.gallery-item');
-        const modal = document.getElementById('galleryModal');
-        const modalImg = modal.querySelector('img');
-        const closeModal = modal.querySelector('.modal-close');
-
-        galleryItems.forEach(item => {
-            item.addEventListener('click', () => {
-                modalImg.src = item.querySelector('img').src;
-                modal.style.display = 'flex';
-            });
-        });
-
-        closeModal.addEventListener('click', () => {
-            modal.style.display = 'none';
-        });
-
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.style.display = 'none';
-            }
-        });
-
-        // Lazy Load Images
-        const images = document.querySelectorAll('img');
-        const imgObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
-                    img.src = img.dataset.src || img.src;
-                    imgObserver.unobserve(img);
-                }
-            });
-        });
-
-        images.forEach(img => {
-            img.dataset.src = img.src;
-            img.src = '';
-            imgObserver.observe(img);
-        });
-
-        // Scroll to Top Button
-        const scrollTopBtn = document.createElement('button');
-        scrollTopBtn.innerHTML = '↑';
-        scrollTopBtn.style.position = 'fixed';
-        scrollTopBtn.style.bottom = '60px';
-        scrollTopBtn.style.right = '60px';
-        scrollTopBtn.style.background = '#ffcc00';
-        scrollTopBtn.style.color = '#004aad';
-        scrollTopBtn.style.border = 'none';
-        scrollTopBtn.style.borderRadius = '50%';
-        scrollTopBtn.style.width = '70px';
-        scrollTopBtn.style.height = '70px';
-        scrollTopBtn.style.fontSize = '2rem';
-        scrollTopBtn.style.cursor = 'pointer';
-        scrollTopBtn.style.opacity = '0';
-        scrollTopBtn.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-        scrollTopBtn.style.zIndex = '1000';
-        document.body.appendChild(scrollTopBtn);
-
-        window.addEventListener('scroll', () => {
-            scrollTopBtn.style.opacity = window.scrollY > 300 ? '1' : '0';
-            scrollTopBtn.style.transform = window.scrollY > 300 ? 'scale(1)' : 'scale(0.7)';
-        });
-
-        scrollTopBtn.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-
-        // Particle Effect
-        const canvas = document.createElement('canvas');
-        canvas.style.position = 'fixed';
-        canvas.style.top = '0';
-        canvas.style.left = '0';
-        canvas.style.width = '100%';
-        canvas.style.height = '100%';
-        canvas.style.zIndex = '1';
-        canvas.style.pointerEvents = 'none';
-        document.body.appendChild(canvas);
-
-        const ctx = canvas.getContext('2d');
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-
-        const particles = [];
-        class Particle {
-            constructor() {
-                this.x = Math.random() * canvas.width;
-                this.y = Math.random() * canvas.height;
-                this.size = Math.random() * 5 + 2;
-                this.speedX = Math.random() * 3 - 1.5;
-                this.speedY = Math.random() * 3 - 1.5;
-            }
-            update() {
-                this.x += this.speedX;
-                this.y += this.speedY;
-                if (this.size > 0.2) this.size -= 0.1;
-                if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
-                if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
-            }
-            draw() {
-                ctx.fillStyle = 'rgba(255, 204, 0, 0.6)';
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-                ctx.fill();
-            }
-        }
-
-        function handleParticles() {
-            for (let i = 0; i < particles.length; i++) {
-                particles[i].update();
-                particles[i].draw();
-                if (particles[i].size <= 0.2) {
-                    particles.splice(i, 1);
-                    i--;
-                }
-            }
-        }
-
-        function animateParticles() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            if (particles.length < 100) {
-                particles.push(new Particle());
-            }
-            handleParticles();
-            requestAnimationFrame(animateParticles);
-        }
-
-        window.addEventListener('resize', () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        });
-
-        animateParticles();
-    </script>
+    <script src="./src/js/lang.js"></script>
+    <script src="./src/js/main.js"></script>
 </body>
 
 </html>
