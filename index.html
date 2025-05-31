@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Samarkand - Heart of the Silk Road</title>
+    <title data-lang-key="title">About Samarkand - Silk Road's Jewel</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@300;400;600&display=swap"
         rel="stylesheet">
     <style>
         * {
@@ -17,9 +17,9 @@
         }
 
         body {
-            font-family: 'Source Sans Pro', sans-serif;
-            color: #1a1a1a;
-            background-color: #f0f4f1;
+            font-family: 'Roboto', sans-serif;
+            color: #1f2a44;
+            background-color: #f9fafb;
             overflow-x: hidden;
         }
 
@@ -28,42 +28,47 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: linear-gradient(135deg, #0052a5 0%, #0085ca 100%);
+            background: linear-gradient(135deg, #004aad 0%, #0077cc 100%);
             color: #fff;
             z-index: 1000;
-            transition: all 0.6s ease;
+            transition: all 0.7s ease;
         }
 
         header.scrolled {
-            background: rgba(0, 82, 165, 0.9);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            background: rgba(0, 74, 173, 0.92);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
         }
 
         .header-content {
-            max-width: 1600px;
+            max-width: 1700px;
             margin: 0 auto;
-            padding: 20px 60px;
+            padding: 25px 70px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .header-content h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.8rem;
-            letter-spacing: 2px;
-            color: #ffd700;
+            font-family: 'Merriweather', serif;
+            font-size: 3rem;
+            letter-spacing: 3px;
+            color: #ffcc00;
             text-transform: uppercase;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
         }
 
         nav a {
             color: #fff;
             text-decoration: none;
-            margin: 0 25px;
-            font-size: 1.2rem;
+            margin: 0 30px;
+            font-size: 1.3rem;
             font-weight: 400;
             position: relative;
-            transition: color 0.4s ease;
+            transition: color 0.5s ease;
         }
 
         nav a::after {
@@ -71,7 +76,7 @@
             position: absolute;
             width: 0;
             height: 3px;
-            background-color: #d00000;
+            background-color: #c8102e;
             bottom: -8px;
             left: 0;
             transition: width 0.5s ease;
@@ -82,7 +87,29 @@
         }
 
         nav a:hover {
-            color: #d00000;
+            color: #c8102e;
+        }
+
+        .lang-switcher {
+            display: flex;
+            gap: 10px;
+        }
+
+        .lang-btn {
+            background: none;
+            border: 2px solid #fff;
+            color: #fff;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn.active,
+        .lang-btn:hover {
+            background: #c8102e;
+            border-color: #c8102e;
         }
 
         /* Hero Section */
@@ -105,63 +132,63 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(rgba(0, 82, 165, 0.6), rgba(0, 128, 0, 0.3));
+            background: linear-gradient(rgba(0, 74, 173, 0.55), rgba(0, 128, 55, 0.25));
         }
 
         .hero-content {
             position: relative;
             z-index: 1;
-            max-width: 1000px;
-            padding: 40px;
+            max-width: 1100px;
+            padding: 50px;
         }
 
         .hero h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 5.5rem;
-            margin-bottom: 20px;
-            text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
-            animation: zoomIn 1.8s ease-out;
+            font-family: 'Merriweather', serif;
+            font-size: 6rem;
+            margin-bottom: 25px;
+            text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+            animation: slideInDown 2s ease-out;
         }
 
         .hero p {
-            font-size: 1.7rem;
-            margin-bottom: 40px;
-            animation: fadeInUp 1.8s ease-out 0.5s;
+            font-size: 1.9rem;
+            margin-bottom: 50px;
+            animation: fadeInUp 2s ease-out 0.6s;
             animation-fill-mode: backwards;
         }
 
         .cta-button {
-            background: #ffd700;
-            color: #0052a5;
-            padding: 18px 50px;
+            background: #ffcc00;
+            color: #004aad;
+            padding: 20px 60px;
             border-radius: 50px;
             text-decoration: none;
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
+            font-family: 'Merriweather', serif;
+            font-size: 1.6rem;
             font-weight: 700;
-            transition: all 0.5s ease;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            transition: all 0.6s ease;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
         }
 
         .cta-button:hover {
             background: #fff;
-            color: #d00000;
-            transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+            color: #c8102e;
+            transform: translateY(-8px) scale(1.1);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
         }
 
         /* Main Content */
         main {
-            max-width: 1600px;
-            margin: 120px auto 60px;
-            padding: 0 60px;
+            max-width: 1700px;
+            margin: 140px auto 80px;
+            padding: 0 70px;
         }
 
         section {
-            margin-bottom: 120px;
+            margin-bottom: 140px;
             opacity: 0;
-            transform: translateY(100px);
-            transition: all 1.2s ease;
+            transform: translateY(120px);
+            transition: all 1.5s ease;
         }
 
         section.visible {
@@ -170,12 +197,12 @@
         }
 
         section h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 4rem;
-            color: #0052a5;
-            border-bottom: 6px solid #008000;
-            padding-bottom: 15px;
-            margin-bottom: 40px;
+            font-family: 'Merriweather', serif;
+            font-size: 4.5rem;
+            color: #004aad;
+            border-bottom: 8px solid #008037;
+            padding-bottom: 20px;
+            margin-bottom: 50px;
             text-transform: uppercase;
             position: relative;
         }
@@ -183,34 +210,34 @@
         section h2::after {
             content: '';
             position: absolute;
-            width: 100px;
-            height: 4px;
-            background: #d00000;
-            bottom: -20px;
+            width: 150px;
+            height: 5px;
+            background: #c8102e;
+            bottom: -25px;
             left: 0;
-            animation: slideInLeft 1s ease-out;
+            animation: slideInLeft 1.2s ease-out;
         }
 
         section p {
-            line-height: 2.1;
-            font-size: 1.4rem;
-            color: #2d3436;
-            margin-bottom: 30px;
+            line-height: 2.2;
+            font-size: 1.5rem;
+            color: #2d3748;
+            margin-bottom: 35px;
         }
 
         .landmark-card {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-            gap: 50px;
-            margin-top: 50px;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 60px;
+            margin-top: 60px;
         }
 
         .card {
             background: #fff;
-            border-radius: 25px;
+            border-radius: 30px;
             overflow: hidden;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-            transition: all 0.6s ease;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+            transition: all 0.7s ease;
             position: relative;
         }
 
@@ -221,9 +248,9 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(rgba(0, 82, 165, 0.2), rgba(255, 255, 255, 0));
+            background: linear-gradient(rgba(0, 74, 173, 0.15), rgba(255, 255, 255, 0));
             opacity: 0;
-            transition: opacity 0.5s ease;
+            transition: opacity 0.6s ease;
         }
 
         .card:hover::before {
@@ -231,62 +258,62 @@
         }
 
         .card:hover {
-            transform: translateY(-15px) rotate(2deg);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            transform: translateY(-20px) rotate(3deg);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
         }
 
         .card img {
             width: 100%;
-            height: 320px;
+            height: 350px;
             object-fit: cover;
-            transition: transform 0.7s ease;
+            transition: transform 0.8s ease;
         }
 
         .card:hover img {
-            transform: scale(1.2);
+            transform: scale(1.25);
         }
 
         .card-content {
-            padding: 35px;
+            padding: 40px;
         }
 
         .card h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.2rem;
-            color: #0052a5;
-            margin-bottom: 20px;
+            font-family: 'Merriweather', serif;
+            font-size: 2.5rem;
+            color: #004aad;
+            margin-bottom: 25px;
         }
 
         .card p {
-            font-size: 1.3rem;
-            color: #4a4a4a;
+            font-size: 1.4rem;
+            color: #4a5568;
         }
 
         /* Interactive Gallery */
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin-top: 50px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 50px;
+            margin-top: 60px;
         }
 
         .gallery-item {
             position: relative;
             overflow: hidden;
-            border-radius: 25px;
+            border-radius: 30px;
             cursor: pointer;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
         }
 
         .gallery-item img {
             width: 100%;
-            height: 280px;
+            height: 300px;
             object-fit: cover;
-            transition: transform 0.8s ease;
+            transition: transform 1s ease;
         }
 
         .gallery-item:hover img {
-            transform: scale(1.25) rotate(3deg);
+            transform: scale(1.3) rotate(5deg);
         }
 
         .gallery-overlay {
@@ -295,12 +322,12 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 82, 165, 0.8);
+            background: rgba(0, 74, 173, 0.85);
             display: flex;
             align-items: center;
             justify-content: center;
             opacity: 0;
-            transition: opacity 0.6s ease;
+            transition: opacity 0.7s ease;
         }
 
         .gallery-item:hover .gallery-overlay {
@@ -308,13 +335,13 @@
         }
 
         .gallery-overlay span {
-            color: #ffd700;
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
+            color: #ffcc00;
+            font-family: 'Merriweather', serif;
+            font-size: 2rem;
             text-align: center;
-            padding: 20px;
-            transform: translateY(20px);
-            transition: transform 0.6s ease;
+            padding: 25px;
+            transform: translateY(30px);
+            transition: transform 0.7s ease;
         }
 
         .gallery-item:hover .gallery-overlay span {
@@ -324,7 +351,7 @@
         /* Timeline Section */
         .timeline {
             position: relative;
-            padding: 40px 0;
+            padding: 50px 0;
         }
 
         .timeline::before {
@@ -332,19 +359,19 @@
             position: absolute;
             top: 0;
             left: 50%;
-            width: 5px;
+            width: 6px;
             height: 100%;
-            background: linear-gradient(#008000, #d00000);
+            background: linear-gradient(#008037, #c8102e);
             transform: translateX(-50%);
         }
 
         .timeline-item {
             display: flex;
             align-items: center;
-            margin: 50px 0;
+            margin: 60px 0;
             position: relative;
             opacity: 0;
-            transition: opacity 1s ease, transform 1s ease;
+            transition: opacity 1.2s ease, transform 1.2s ease;
         }
 
         .timeline-item.visible {
@@ -353,76 +380,76 @@
         }
 
         .timeline-item:nth-child(odd) {
-            transform: translateX(-100px);
+            transform: translateX(-120px);
         }
 
         .timeline-item:nth-child(even) {
-            transform: translateX(100px);
+            transform: translateX(120px);
             flex-direction: row-reverse;
         }
 
         .timeline-content {
             background: #fff;
-            padding: 25px;
-            border-radius: 20px;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            padding: 30px;
+            border-radius: 25px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
             width: 45%;
-            transition: transform 0.5s ease;
+            transition: transform 0.6s ease;
         }
 
         .timeline-item:hover .timeline-content {
-            transform: translateY(-10px);
+            transform: translateY(-15px);
         }
 
         .timeline-content h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2rem;
-            color: #0052a5;
-            margin-bottom: 15px;
+            font-family: 'Merriweather', serif;
+            font-size: 2.2rem;
+            color: #004aad;
+            margin-bottom: 20px;
         }
 
         .timeline-content p {
-            font-size: 1.2rem;
-            color: #4a4a4a;
+            font-size: 1.3rem;
+            color: #4a5568;
         }
 
         .timeline-marker {
-            width: 25px;
-            height: 25px;
-            background: #ffd700;
-            border: 3px solid #008000;
+            width: 30px;
+            height: 30px;
+            background: #ffcc00;
+            border: 4px solid #008037;
             border-radius: 50%;
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
-            box-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
-            animation: pulse 2s infinite;
+            box-shadow: 0 0 20px rgba(255, 204, 0, 0.8);
+            animation: pulse 2.5s infinite;
         }
 
         /* Footer */
         footer {
-            background: linear-gradient(135deg, #0052a5 0%, #0085ca 100%);
+            background: linear-gradient(135deg, #004aad 0%, #0077cc 100%);
             color: #fff;
             text-align: center;
-            padding: 50px;
-            font-size: 1.3rem;
+            padding: 60px;
+            font-size: 1.4rem;
             position: relative;
         }
 
         footer p {
             margin: 0;
-            font-family: 'Playfair Display', serif;
+            font-family: 'Merriweather', serif;
         }
 
         footer a {
-            color: #d00000;
+            color: #c8102e;
             text-decoration: none;
-            margin-left: 20px;
-            transition: color 0.4s ease;
+            margin-left: 25px;
+            transition: color 0.5s ease;
         }
 
         footer a:hover {
-            color: #ffd700;
+            color: #ffcc00;
         }
 
         /* Modal for Gallery */
@@ -433,19 +460,19 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.9);
+            background: rgba(0, 0, 0, 0.95);
             z-index: 2000;
             align-items: center;
             justify-content: center;
         }
 
         .modal-content {
-            max-width: 90%;
-            max-height: 90%;
-            border-radius: 20px;
+            max-width: 95%;
+            max-height: 95%;
+            border-radius: 25px;
             overflow: hidden;
             position: relative;
-            animation: zoomIn 0.5s ease-out;
+            animation: zoomIn 0.6s ease-out;
         }
 
         .modal-content img {
@@ -456,39 +483,39 @@
 
         .modal-close {
             position: absolute;
-            top: 25px;
-            right: 25px;
+            top: 30px;
+            right: 30px;
             color: #fff;
-            font-size: 3rem;
+            font-size: 3.5rem;
             cursor: pointer;
-            background: #0052a5;
+            background: #004aad;
             border-radius: 50%;
-            padding: 10px 15px;
-            transition: all 0.4s ease;
+            padding: 12px 18px;
+            transition: all 0.5s ease;
         }
 
         .modal-close:hover {
-            background: #d00000;
-            transform: rotate(90deg);
+            background: #c8102e;
+            transform: rotate(180deg);
         }
 
         /* Animations */
-        @keyframes zoomIn {
+        @keyframes slideInDown {
             from {
                 opacity: 0;
-                transform: scale(0.8);
+                transform: translateY(-120px);
             }
 
             to {
                 opacity: 1;
-                transform: scale(1);
+                transform: translateY(0);
             }
         }
 
         @keyframes fadeInUp {
             from {
                 opacity: 0;
-                transform: translateY(100px);
+                transform: translateY(120px);
             }
 
             to {
@@ -500,7 +527,7 @@
         @keyframes slideInLeft {
             from {
                 opacity: 0;
-                transform: translateX(-100px);
+                transform: translateX(-120px);
             }
 
             to {
@@ -509,36 +536,48 @@
             }
         }
 
+        @keyframes zoomIn {
+            from {
+                opacity: 0;
+                transform: scale(0.7);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
         @keyframes pulse {
             0% {
-                box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.7);
+                box-shadow: 0 0 0 0 rgba(255, 204, 0, 0.8);
             }
 
             70% {
-                box-shadow: 0 0 0 15px rgba(255, 215, 0, 0);
+                box-shadow: 0 0 0 20px rgba(255, 204, 0, 0);
             }
 
             100% {
-                box-shadow: 0 0 0 0 rgba(255, 215, 0, 0);
+                box-shadow: 0 0 0 0 rgba(255, 204, 0, 0);
             }
         }
 
         /* Responsive Design */
         @media (max-width: 1200px) {
             .header-content {
-                padding: 20px 40px;
+                padding: 20px 50px;
             }
 
             .header-content h1 {
-                font-size: 2.4rem;
+                font-size: 2.6rem;
             }
 
             .hero h2 {
-                font-size: 4.5rem;
+                font-size: 5rem;
             }
 
             .hero p {
-                font-size: 1.5rem;
+                font-size: 1.7rem;
             }
 
             .timeline-content {
@@ -553,20 +592,20 @@
             }
 
             .header-content h1 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
 
             nav a {
-                margin: 10px 15px;
-                font-size: 1.1rem;
+                margin: 10px 20px;
+                font-size: 1.2rem;
             }
 
             .hero h2 {
-                font-size: 3.5rem;
+                font-size: 4rem;
             }
 
             .hero p {
-                font-size: 1.3rem;
+                font-size: 1.5rem;
             }
 
             .card {
@@ -578,7 +617,7 @@
             }
 
             .timeline::before {
-                left: 25px;
+                left: 30px;
             }
 
             .timeline-item {
@@ -594,11 +633,11 @@
 
             .timeline-content {
                 width: 100%;
-                margin-left: 50px;
+                margin-left: 60px;
             }
 
             .timeline-marker {
-                left: 25px;
+                left: 30px;
             }
         }
     </style>
@@ -607,149 +646,157 @@
 <body>
     <header>
         <div class="header-content">
-            <h1>About Samarkand</h1>
+            <h1 data-lang-key="header_title">About Samarkand</h1>
             <nav>
-                <a href="#history">History</a>
-                <a href="#landmarks">Landmarks</a>
-                <a href="#museums">Museums</a>
-                <a href="#gallery">Gallery</a>
+                <a href="#history" data-lang-key="nav_history">History</a>
+                <a href="#landmarks" data-lang-key="nav_landmarks">Landmarks</a>
+                <a href="#museums" data-lang-key="nav_museums">Museums</a>
+                <a href="#gallery" data-lang-key="nav_gallery">Gallery</a>
+                <div class="lang-switcher">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="uz">UZ</button>
+                </div>
             </nav>
         </div>
     </header>
 
     <section class="hero">
         <div class="hero-content">
-            <h2>Discover Samarkand</h2>
-            <p>Embark on a timeless journey to the heart of the Silk Road, where history, culture, and beauty converge.
-            </p>
-            <a href="#landmarks" class="cta-button">Explore the Wonders</a>
+            <h2 data-lang-key="hero_title">Discover Samarkand</h2>
+            <p data-lang-key="hero_text">Journey to the heart of the Silk Road, where history and culture intertwine in
+                timeless splendor.</p>
+            <a href="#landmarks" class="cta-button" data-lang-key="hero_cta">Explore Now</a>
         </div>
     </section>
 
     <main>
         <section id="history">
-            <h2>History of Samarkand</h2>
+            <h2 data-lang-key="history_title">History of Samarkand</h2>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <h3>8th Century BC</h3>
-                        <p>Founded as Marakanda, Samarkand becomes the capital of Sogdiana, as referenced in the
-                            Zoroastrian "Avesta."</p>
+                        <h3 data-lang-key="history_8bc_title">8th Century BC</h3>
+                        <p data-lang-key="history_8bc_text">Founded as Marakanda, Samarkand becomes the capital of
+                            Sogdiana, as noted in the Zoroastrian "Avesta."</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <h3>329 BC</h3>
-                        <p>Alexander the Great conquers Samarkand, cementing its role as a key hub on the Great Silk
-                            Road.</p>
+                        <h3 data-lang-key="history_329bc_title">329 BC</h3>
+                        <p data-lang-key="history_329bc_text">Alexander the Great conquers Samarkand, establishing its
+                            significance on the Great Silk Road.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <h3>14th Century</h3>
-                        <p>Amir Timur makes Samarkand the capital of his empire, sparking a golden era of art and
-                            architecture.</p>
+                        <h3 data-lang-key="history_14c_title">14th Century</h3>
+                        <p data-lang-key="history_14c_text">Amir Timur makes Samarkand the capital of his empire,
+                            ushering in a golden age of culture and architecture.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <h3>1868</h3>
-                        <p>Russian forces conquer Samarkand, integrating it into the Russian Empire.</p>
+                        <h3 data-lang-key="history_1868_title">1868</h3>
+                        <p data-lang-key="history_1868_text">Russian forces conquer Samarkand, integrating it into the
+                            Russian Empire.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <h3>1925–1939</h3>
-                        <p>Samarkand serves as Uzbekistan’s capital, later earning UNESCO World Heritage status for its
-                            cultural treasures.</p>
+                        <h3 data-lang-key="history_1925_title">1925–1939</h3>
+                        <p data-lang-key="history_1925_text">Samarkand serves as Uzbekistan’s capital, later becoming a
+                            UNESCO World Heritage Site.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="landmarks">
-            <h2>Landmarks & Wonders</h2>
-            <p>Marvel at Samarkand’s architectural masterpieces, adorned with vibrant tiles and majestic domes.</p>
+            <h2 data-lang-key="landmarks_title">Landmarks & Wonders</h2>
+            <p data-lang-key="landmarks_text">Discover Samarkand’s architectural masterpieces, adorned with intricate
+                tilework and majestic domes.</p>
             <div class="landmark-card">
                 <div class="card">
                     <img src="https://images.unsplash.com/photo-1596456142463-b0b8f7d25e1e" alt="Registan Square">
                     <div class="card-content">
-                        <h3>Registan Square</h3>
-                        <p>A UNESCO World Heritage Site, featuring the Ulugbek (1420), Sherdor (1636), and Tillya-Kari
-                            (1660) madrassahs, showcasing Timurid splendor.</p>
+                        <h3 data-lang-key="landmark_registan_title">Registan Square</h3>
+                        <p data-lang-key="landmark_registan_text">A UNESCO World Heritage Site, featuring the Ulugbek
+                            (1420), Sherdor (1636), and Tillya-Kari (1660) madrassahs.</p>
                     </div>
                 </div>
                 <div class="card">
                     <img src="https://images.unsplash.com/photo-1596456142463-b0b8f7d25e1e" alt="Gur-Emir Mausoleum">
                     <div class="card-content">
-                        <h3>Gur-Emir Mausoleum</h3>
-                        <p>Built in 1404, this mausoleum houses Amir Timur’s tomb, renowned for its turquoise dome and
-                            intricate mosaics.</p>
+                        <h3 data-lang-key="landmark_guremir_title">Gur-Emir Mausoleum</h3>
+                        <p data-lang-key="landmark_guremir_text">Built in 1404, this mausoleum houses Amir Timur’s tomb,
+                            famed for its turquoise dome.</p>
                     </div>
                 </div>
                 <div class="card">
                     <img src="https://images.unsplash.com/photo-1596456142463-b0b8f7d25e1e" alt="Bibi-Khanum Mosque">
                     <div class="card-content">
-                        <h3>Bibi-Khanum Mosque</h3>
-                        <p>Constructed in 1404 for Amir Timur’s wife, this mosque boasts a grand stone Quran platform
-                            and stunning design.</p>
+                        <h3 data-lang-key="landmark_bibikhanum_title">Bibi-Khanum Mosque</h3>
+                        <p data-lang-key="landmark_bibikhanum_text">Constructed in 1404 for Amir Timur’s wife, featuring
+                            a grand stone Quran platform.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="museums">
-            <h2>Museums of Samarkand</h2>
-            <p>Explore the rich heritage of Samarkand through its museums, preserving centuries-old artifacts and
-                stories.</p>
+            <h2 data-lang-key="museums_title">Museums of Samarkand</h2>
+            <p data-lang-key="museums_text">Explore Samarkand’s rich heritage through its museums, preserving ancient
+                artifacts and stories.</p>
             <div class="landmark-card">
                 <div class="card">
                     <img src="https://images.unsplash.com/photo-1596456142463-b0b8f7d25e1e" alt="Afrosiab Museum">
                     <div class="card-content">
-                        <h3>Afrosiab Museum</h3>
-                        <p>Near the ancient Afrosiab site, this museum showcases 8th-century BC artifacts, including
-                            Samanid palace frescoes.</p>
+                        <h3 data-lang-key="museum_afrosiab_title">Afrosiab Museum</h3>
+                        <p data-lang-key="museum_afrosiab_text">Showcases 8th-century BC artifacts, including Samanid
+                            palace frescoes, near the ancient Afrosiab site.</p>
                     </div>
                 </div>
                 <div class="card">
                     <img src="https://images.unsplash.com/photo-1596456142463-b0b8f7d25e1e"
                         alt="Ulugbek Observatory Museum">
                     <div class="card-content">
-                        <h3>Ulugbek Observatory Museum</h3>
-                        <p>Highlights Mirzo Ulugbek’s 15th-century astronomical achievements with a reconstructed
-                            observatory and sextant.</p>
+                        <h3 data-lang-key="museum_ulugbek_title">Ulugbek Observatory Museum</h3>
+                        <p data-lang-key="museum_ulugbek_text">Highlights Mirzo Ulugbek’s 15th-century astronomical
+                            achievements with a reconstructed observatory.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="gallery">
-            <h2>Visual Splendor</h2>
-            <p>Immerse yourself in the vibrant beauty of Samarkand through these breathtaking images.</p>
+            <h2 data-lang-key="gallery_title">Visual Splendor</h2>
+            <p data-lang-key="gallery_text">Immerse yourself in Samarkand’s vibrant beauty through these captivating
+                images.</p>
             <div class="gallery">
                 <div class="gallery-item">
                     <img src="https://images.unsplash.com/photo-1596456142463-b0b8f7d25e1e" alt="Shahi Zinda">
-                    <div class="gallery-overlay"><span>Shahi Zinda</span></div>
+                    <div class="gallery-overlay"><span data-lang-key="gallery_shahi_zinda">Shahi Zinda</span></div>
                 </div>
                 <div class="gallery-item">
                     <img src="https://images.unsplash.com/photo-1596456142463-b0b8f7d25e1e" alt="Ulugbek Observatory">
-                    <div class="gallery-overlay"><span>Ulugbek Observatory</span></div>
+                    <div class="gallery-overlay"><span data-lang-key="gallery_ulugbek">Ulugbek Observatory</span></div>
                 </div>
                 <div class="gallery-item">
                     <img src="https://images.unsplash.com/photo-1596456142463-b0b8f7d25e1e" alt="Saint Daniel's Tomb">
-                    <div class="gallery-overlay"><span>Saint Daniel's Tomb</span></div>
+                    <div class="gallery-overlay"><span data-lang-key="gallery_daniel">Saint Daniel's Tomb</span></div>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>© 2025 About Samarkand. All rights reserved. <a href="#contact">Contact Us</a></p>
+        <p data-lang-key="footer_text">© 2025 About Samarkand. All rights reserved. <a href="#contact"
+                data-lang-key="footer_contact">Contact Us</a></p>
     </footer>
 
     <div class="modal" id="galleryModal">
@@ -759,6 +806,7 @@
         </div>
     </div>
 
+    <script src="lang.js"></script>
     <script>
         // Smooth Scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -794,7 +842,7 @@
         window.addEventListener('scroll', () => {
             const hero = document.querySelector('.hero');
             const scrollPosition = window.scrollY;
-            hero.style.backgroundPositionY = `${scrollPosition * 0.6}px`;
+            hero.style.backgroundPositionY = `${scrollPosition * 0.7}px`;
         });
 
         // Gallery Modal
@@ -842,51 +890,95 @@
         const scrollTopBtn = document.createElement('button');
         scrollTopBtn.innerHTML = '↑';
         scrollTopBtn.style.position = 'fixed';
-        scrollTopBtn.style.bottom = '50px';
-        scrollTopBtn.style.right = '50px';
-        scrollTopBtn.style.background = '#ffd700';
-        scrollTopBtn.style.color = '#0052a5';
+        scrollTopBtn.style.bottom = '60px';
+        scrollTopBtn.style.right = '60px';
+        scrollTopBtn.style.background = '#ffcc00';
+        scrollTopBtn.style.color = '#004aad';
         scrollTopBtn.style.border = 'none';
         scrollTopBtn.style.borderRadius = '50%';
-        scrollTopBtn.style.width = '60px';
-        scrollTopBtn.style.height = '60px';
-        scrollTopBtn.style.fontSize = '1.8rem';
+        scrollTopBtn.style.width = '70px';
+        scrollTopBtn.style.height = '70px';
+        scrollTopBtn.style.fontSize = '2rem';
         scrollTopBtn.style.cursor = 'pointer';
         scrollTopBtn.style.opacity = '0';
-        scrollTopBtn.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+        scrollTopBtn.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
         scrollTopBtn.style.zIndex = '1000';
         document.body.appendChild(scrollTopBtn);
 
         window.addEventListener('scroll', () => {
             scrollTopBtn.style.opacity = window.scrollY > 300 ? '1' : '0';
-            scrollTopBtn.style.transform = window.scrollY > 300 ? 'scale(1)' : 'scale(0.8)';
+            scrollTopBtn.style.transform = window.scrollY > 300 ? 'scale(1)' : 'scale(0.7)';
         });
 
         scrollTopBtn.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
-        // Mouse Trail Effect
-        const trail = document.createElement('div');
-        trail.style.position = 'fixed';
-        trail.style.width = '15px';
-        trail.style.height = '15px';
-        trail.style.background = 'rgba(255, 215, 0, 0.5)';
-        trail.style.borderRadius = '50%';
-        trail.style.pointerEvents = 'none';
-        trail.style.zIndex = '9999';
-        trail.style.transition = 'all 0.2s ease';
-        document.body.appendChild(trail);
+        // Particle Effect
+        const canvas = document.createElement('canvas');
+        canvas.style.position = 'fixed';
+        canvas.style.top = '0';
+        canvas.style.left = '0';
+        canvas.style.width = '100%';
+        canvas.style.height = '100%';
+        canvas.style.zIndex = '1';
+        canvas.style.pointerEvents = 'none';
+        document.body.appendChild(canvas);
 
-        document.addEventListener('mousemove', (e) => {
-            trail.style.left = `${e.clientX - 7.5}px`;
-            trail.style.top = `${e.clientY - 7.5}px`;
-            trail.style.opacity = '1';
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const particles = [];
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 5 + 2;
+                this.speedX = Math.random() * 3 - 1.5;
+                this.speedY = Math.random() * 3 - 1.5;
+            }
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                if (this.size > 0.2) this.size -= 0.1;
+                if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+                if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+            }
+            draw() {
+                ctx.fillStyle = 'rgba(255, 204, 0, 0.6)';
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        function handleParticles() {
+            for (let i = 0; i < particles.length; i++) {
+                particles[i].update();
+                particles[i].draw();
+                if (particles[i].size <= 0.2) {
+                    particles.splice(i, 1);
+                    i--;
+                }
+            }
+        }
+
+        function animateParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            if (particles.length < 100) {
+                particles.push(new Particle());
+            }
+            handleParticles();
+            requestAnimationFrame(animateParticles);
+        }
+
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
         });
 
-        document.addEventListener('mouseleave', () => {
-            trail.style.opacity = '0';
-        });
+        animateParticles();
     </script>
 </body>
 
